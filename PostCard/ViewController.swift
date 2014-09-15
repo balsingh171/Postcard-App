@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameOutputLabel: UILabel!
     @IBOutlet weak var mailButton: UIButton!
     @IBOutlet weak var enterAMessageTextField: UITextField!
     @IBOutlet weak var enterNameTextField: UITextField!
@@ -39,8 +40,17 @@ class ViewController: UIViewController {
         enterAMessageTextField.text = ""
         // make keyboard disappear
         
-        enterAMessageTextField.resignFirstResponder()
+        nameOutputLabel.hidden = false
         
-        mailButton.setTitle("Mail Sent", forState:UIControlState.Normal)    }
+        enterAMessageTextField.resignFirstResponder()
+        nameOutputLabel.text =   enterNameTextField.text
+        
+        nameOutputLabel.textColor = UIColor.blueColor()
+        
+        
+        mailButton.setTitle("Mail Sent", forState:UIControlState.Normal)
+        
+        
+    }
 }
 

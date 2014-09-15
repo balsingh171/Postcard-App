@@ -22,14 +22,6 @@
                                     <rect key="frame" x="237" y="91" width="80" height="80"/>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZW-Wh-dKS">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="248" width="314" height="30"/>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter A Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8F-ZH-r0T">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -60,24 +52,43 @@
                                     <action selector="sendMailButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e4E-8o-tKe"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSY-6h-FlI">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="473" width="213" height="48"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZW-Wh-dKS">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="248" width="314" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="lUe-e5-IfZ"/>
-                                <exclude reference="XZW-Wh-dKS"/>
                                 <exclude reference="t8F-ZH-r0T"/>
                                 <exclude reference="cto-o1-qWK"/>
                                 <exclude reference="ChN-Xz-8By"/>
+                                <exclude reference="RSY-6h-FlI"/>
+                                <exclude reference="XZW-Wh-dKS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="lUe-e5-IfZ"/>
-                                <include reference="XZW-Wh-dKS"/>
                                 <include reference="t8F-ZH-r0T"/>
                                 <include reference="cto-o1-qWK"/>
                                 <include reference="ChN-Xz-8By"/>
+                                <include reference="RSY-6h-FlI"/>
+                                <include reference="XZW-Wh-dKS"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,6 +99,7 @@
                         <outlet property="enterNameTextField" destination="XZW-Wh-dKS" id="5NV-mG-7cd"/>
                         <outlet property="mailButton" destination="ChN-Xz-8By" id="caE-Va-tnd"/>
                         <outlet property="messageLabel" destination="cto-o1-qWK" id="TGF-Os-Qdf"/>
+                        <outlet property="nameOutputLabel" destination="RSY-6h-FlI" id="oB3-6b-8kJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
